@@ -3,7 +3,6 @@ package de.breuco.micronaut.security.authentication;
 import com.google.firebase.auth.FirebaseToken;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.security.authentication.Authentication;
-import java.util.Collections;
 import java.util.Map;
 
 /** @author breucode */
@@ -22,6 +21,7 @@ public class FirebaseAuthentication implements Authentication {
 
     /** @return the uid of the {@link FirebaseToken}. */
     @Override
+    @NonNull
     public String getName() {
         return firebaseToken.getUid();
     }
@@ -30,10 +30,6 @@ public class FirebaseAuthentication implements Authentication {
     @Override
     @NonNull
     public Map<String, Object> getAttributes() {
-        if (firebaseToken.getClaims() != null) {
-            return firebaseToken.getClaims();
-        } else {
-            return Collections.emptyMap();
-        }
+        return firebaseToken.getClaims();
     }
 }
