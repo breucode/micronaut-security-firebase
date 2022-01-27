@@ -22,7 +22,7 @@ val pomDesc = "Validation of Firebase tokens in Micronaut Security"
 val artifactName = "micronaut-security-firebase"
 val artifactGroup = "de.breuco"
 group = artifactGroup
-val artifactVersion = "0.0.0"
+val artifactVersion = "0.1.0"
 version = artifactVersion
 
 spotless {
