@@ -1,0 +1,22 @@
+name: Publish package to maven central
+on:
+  release:
+    types: [created]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gradle/wrapper-validation-action@v1
+      - name: Unset JAVA_HOME
+        run: unset JAVA_HOME
+      - uses: asdf-vm/actions/install@v1
+      - name: Check before publish
+        run: ./gradlew check
+      - name: Publish package
+        run: ./gradlew build publishToSonatype closeAndReleaseSonatypeStagingRepository
+        env:
+          ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.OSSRH_USERNAME }}
+          ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.OSSRH_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.GPG_KEY_ARMORED }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
