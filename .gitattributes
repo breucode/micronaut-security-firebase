@@ -1,1 +1,2 @@
 gradlew.bat eol=crlf
+*.gradle.kts linguist-detectable=false
