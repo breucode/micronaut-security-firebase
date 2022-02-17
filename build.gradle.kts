@@ -15,7 +15,7 @@ java {
 }
 
 micronaut {
-    version("3.3.0")
+    version("3.3.3")
 }
 
 val pomDesc = "Validation of Firebase tokens in Micronaut Security"
@@ -26,7 +26,7 @@ val artifactVersion = "0.2.0"
 version = artifactVersion
 
 spotless {
-    val ktlintVersion = "0.43.2"
+    val ktlintVersion = "0.44.0"
     java {
         googleJavaFormat().aosp()
     }
