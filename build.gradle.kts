@@ -2,7 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     id("java-library")
-    id("io.micronaut.library") version "3.2.2"
+    id("io.micronaut.library") version "3.3.1"
     id("com.diffplug.spotless") version "6.3.0"
     id("com.github.ben-manes.versions") version "0.42.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
