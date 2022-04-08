@@ -15,7 +15,7 @@ java {
 }
 
 micronaut {
-    version("3.3.3")
+    version("3.4.1")
 }
 
 val pomDesc = "Validation of Firebase tokens in Micronaut Security"
