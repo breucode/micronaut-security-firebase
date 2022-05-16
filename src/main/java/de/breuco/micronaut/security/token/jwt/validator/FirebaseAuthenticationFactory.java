@@ -7,7 +7,9 @@ import io.micronaut.security.token.TokenAuthenticationFactory;
 import jakarta.inject.Singleton;
 import java.util.Optional;
 
-/** @author breucode */
+/**
+ * @author breucode
+ */
 @Singleton
 public class FirebaseAuthenticationFactory implements TokenAuthenticationFactory<FirebaseToken> {
 

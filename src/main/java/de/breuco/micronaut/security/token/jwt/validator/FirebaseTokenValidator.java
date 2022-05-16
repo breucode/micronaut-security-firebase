@@ -11,7 +11,9 @@ import jakarta.inject.Singleton;
 import org.reactivestreams.Publisher;
 import reactor.core.publisher.Flux;
 
-/** @author breucode */
+/**
+ * @author breucode
+ */
 @Singleton
 @Replaces(JwtTokenValidator.class)
 public class FirebaseTokenValidator implements TokenValidator {

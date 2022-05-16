@@ -26,7 +26,7 @@ version = artifactVersion
 
 spotless {
   val ktfmtVersion = "0.37"
-  kotlin { ktfmt(ktfmtVersion).googleStyle() }
+  java { googleJavaFormat().aosp() }
   kotlinGradle {
     target("*.gradle.kts")
 
