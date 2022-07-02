@@ -20,7 +20,7 @@ val artifactGroup = "de.breuco"
 
 group = artifactGroup
 
-val artifactVersion = "0.2.3"
+val artifactVersion = "0.2.4"
 
 version = artifactVersion
 
