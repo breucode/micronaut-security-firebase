@@ -20,9 +20,7 @@ val artifactGroup = "de.breuco"
 
 group = artifactGroup
 
-val artifactVersion = "0.2.4"
-
-version = artifactVersion
+version = "%ARTIFACT_VERSION%"
 
 spotless {
   val ktfmtVersion = "0.40"
