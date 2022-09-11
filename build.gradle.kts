@@ -22,15 +22,15 @@ group = artifactGroup
 
 version = "%ARTIFACT_VERSION%"
 
-spotless {
-  val ktfmtVersion = "0.40"
-  java { googleJavaFormat().aosp() }
-  kotlinGradle {
-    target("*.gradle.kts")
-
-    ktfmt(ktfmtVersion).googleStyle()
-  }
-}
+//spotless {
+//  val ktfmtVersion = "0.40"
+//  java { googleJavaFormat().aosp() }
+//  kotlinGradle {
+//    target("*.gradle.kts")
+//
+//    ktfmt(ktfmtVersion).googleStyle()
+//  }
+//}
 
 fun isNonStable(version: String): Boolean {
   val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
