@@ -56,7 +56,7 @@ dependencies {
   implementation("io.micronaut.security:micronaut-security-jwt")
   implementation("io.micronaut.reactor:micronaut-reactor")
 
-  implementation("com.google.firebase:firebase-admin:9.0.0")
+  implementation("com.google.firebase:firebase-admin:9.1.0")
 }
 
 nexusPublishing {
