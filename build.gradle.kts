@@ -12,7 +12,7 @@ plugins {
 
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(8)) }
 
-micronaut { version("3.7.4") }
+micronaut { version("3.8.2") }
 
 val pomDesc = "Validation of Firebase tokens in Micronaut Security"
 val artifactName = "micronaut-security-firebase"
