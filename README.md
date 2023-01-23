@@ -23,7 +23,7 @@ This dependency is available at [Maven Central](https://search.maven.org/artifac
 ```kotlin
 dependencies {
     ...
-    implementation("de.breuco:micronaut-security-firebase:0.2.6")
+    implementation("de.breuco:micronaut-security-firebase:0.2.7")
     compileOnly("io.micronaut.security:micronaut-security")
     ...
 }
@@ -38,7 +38,7 @@ dependencies {
         <dependency>
             <groupId>de.breuco</groupId>
             <artifactId>micronaut-security-firebase</artifactId>
-            <version>0.2.6</version>
+            <version>0.2.7</version>
         </dependency>
         <dependency>
             <groupId>io.micronaut.security</groupId>
