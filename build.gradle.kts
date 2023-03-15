@@ -10,7 +10,7 @@ plugins {
   id("signing")
 }
 
-java { toolchain.languageVersion.set(JavaLanguageVersion.of(8)) }
+java { toolchain.languageVersion.set(JavaLanguageVersion.of(11)) }
 
 micronaut { version("3.8.2") }
 
