@@ -3,7 +3,6 @@ package de.breuco.micronaut.security.token.jwt.validator;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseToken;
 import io.micronaut.context.annotation.Replaces;
-import io.micronaut.http.HttpRequest;
 import io.micronaut.security.authentication.Authentication;
 import io.micronaut.security.token.jwt.validator.JwtTokenValidator;
 import io.micronaut.security.token.validator.TokenValidator;
@@ -11,12 +10,14 @@ import jakarta.inject.Singleton;
 import org.reactivestreams.Publisher;
 import reactor.core.publisher.Flux;
 
+import java.net.http.HttpRequest;
+
 /**
  * @author breucode
  */
 @Singleton
 @Replaces(JwtTokenValidator.class)
-public class FirebaseTokenValidator implements TokenValidator {
+public class FirebaseTokenValidator implements TokenValidator<HttpRequest> {
 
     private final FirebaseAuthenticationFactory firebaseAuthenticationFactory;
 
@@ -35,7 +36,7 @@ public class FirebaseTokenValidator implements TokenValidator {
      *     validation fails.
      */
     @Override
-    public Publisher<Authentication> validateToken(String token, HttpRequest<?> request) {
+    public Publisher<Authentication> validateToken(String token, HttpRequest request) {
 
         try {
             FirebaseToken firebaseToken = FirebaseAuth.getInstance().verifyIdToken(token);
