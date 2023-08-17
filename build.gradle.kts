@@ -2,7 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
   id("java-library")
-  id("io.micronaut.library") version "3.7.10"
+  id("io.micronaut.library") version "4.0.2"
   id("com.diffplug.spotless") version "6.20.0"
   id("com.github.ben-manes.versions") version "0.47.0"
   id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
@@ -10,9 +10,9 @@ plugins {
   id("signing")
 }
 
-java { toolchain.languageVersion.set(JavaLanguageVersion.of(11)) }
+java { toolchain.languageVersion.set(JavaLanguageVersion.of(17)) }
 
-micronaut { version("3.8.2") }
+micronaut { version("4.0.3") }
 
 val pomDesc = "Validation of Firebase tokens in Micronaut Security"
 val artifactName = "micronaut-security-firebase"
@@ -33,7 +33,7 @@ version = "%ARTIFACT_VERSION%"
 //}
 
 fun isNonStable(version: String): Boolean {
-  val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
+  val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
   val regex = "^[0-9,.v-]+(-r)?$".toRegex()
   val isStable = stableKeyword || regex.matches(version)
   return isStable.not()
