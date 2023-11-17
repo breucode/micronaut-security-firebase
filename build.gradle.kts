@@ -4,7 +4,7 @@ plugins {
   id("java-library")
   id("io.micronaut.library") version "4.2.0"
   id("com.diffplug.spotless") version "6.22.0"
-  id("com.github.ben-manes.versions") version "0.49.0"
+  id("com.github.ben-manes.versions") version "0.50.0"
   id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
   id("maven-publish")
   id("signing")
