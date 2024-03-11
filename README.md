@@ -1,3 +1,19 @@
+ARCHIVED because this lib doesn't work any more and can be replaced by a much simpler solution:
+Just add the following to your application.yaml
+
+
+```
+micronaut:
+  security:
+    token:
+      jwt:
+        enabled: true
+        signatures:
+          jwks:
+            firebase:
+              url: 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com'
+```
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/breucode/micronaut-security-firebase?style=flat-square)](https://github.com/breucode/micronaut-security-firebase/releases/latest)
 [![Maven central release (latest)](https://img.shields.io/maven-central/v/de.breuco/micronaut-security-firebase?style=flat-square)](https://search.maven.org/artifact/de.breuco/micronaut-security-firebase)
 [![License](https://img.shields.io/github/license/breucode/micronaut-security-firebase?style=flat-square)](LICENSE)
